@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>26 Jan 2020, 12:06</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">AccountActivityStepDefs.account_drop_down_should_have_the_following_options(String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="251481900">0.251</td>
+              <td class="duration" data-value="251481900">0.251</td>
+              <td class="duration" data-value="251481900">0.251</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.in_the_Account_drop_down_default_option_should_be(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="195798733">0.195</td>
+              <td class="duration" data-value="195798733">0.246</td>
+              <td class="duration" data-value="1174792400">1.174</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_results_should_be_sorted_by_most_recent_date()</td>
+              <td>1</td>
+              <td class="duration" data-value="44830000">0.044</td>
+              <td class="duration" data-value="44830000">0.044</td>
+              <td class="duration" data-value="44830000">0.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_results_table_should_not_show_descriptions_containing(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="29235600">0.029</td>
+              <td class="duration" data-value="29235600">0.029</td>
+              <td class="duration" data-value="29235600">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_results_table_should_only_not_contain_transactions_dated(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="29886800">0.029</td>
+              <td class="duration" data-value="29886800">0.029</td>
+              <td class="duration" data-value="29886800">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_results_table_should_only_show_descriptions_containing(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="5613391425">5.613</td>
+              <td class="duration" data-value="5613391425">13.088</td>
+              <td class="duration" data-value="22453565700">22.453</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_results_table_should_only_show_transactions_dates_between_to(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="3094386250">3.094</td>
+              <td class="duration" data-value="3094386250">3.106</td>
+              <td class="duration" data-value="6188772500">6.188</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_results_table_should_show_at_least_one_result_under_deposit()</td>
+              <td>2</td>
+              <td class="duration" data-value="85726550">0.085</td>
+              <td class="duration" data-value="85726550">0.131</td>
+              <td class="duration" data-value="171453100">0.171</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_results_table_should_show_at_least_one_result_under_withdrawal()</td>
+              <td>2</td>
+              <td class="duration" data-value="27031250">0.027</td>
+              <td class="duration" data-value="27031250">0.038</td>
+              <td class="duration" data-value="54062500">0.054</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_results_table_should_show_no_result_under_deposit()</td>
+              <td>1</td>
+              <td class="duration" data-value="2064356600">2.064</td>
+              <td class="duration" data-value="2064356600">2.064</td>
+              <td class="duration" data-value="2064356600">2.064</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_results_table_should_show_no_result_under_withdrawal()</td>
+              <td>1</td>
+              <td class="duration" data-value="2088963500">2.088</td>
+              <td class="duration" data-value="2088963500">2.088</td>
+              <td class="duration" data-value="2088963500">2.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_user_clicks_on_link_on_the_page(String)</td>
+              <td>7</td>
+              <td class="duration" data-value="118201285">0.118</td>
+              <td class="duration" data-value="118201285">0.199</td>
+              <td class="duration" data-value="827409000">0.827</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_user_enters_date_range_from_to(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="494696600">0.494</td>
+              <td class="duration" data-value="494696600">0.589</td>
+              <td class="duration" data-value="989393200">0.989</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_user_enters_description(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="247219275">0.247</td>
+              <td class="duration" data-value="247219275">0.354</td>
+              <td class="duration" data-value="988877100">0.988</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.the_user_selects_type(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1232287000">1.232</td>
+              <td class="duration" data-value="1232287000">1.259</td>
+              <td class="duration" data-value="2464574000">2.464</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountActivityStepDefs.transactions_table_should_have_column_names(String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="137212600">0.137</td>
+              <td class="duration" data-value="137212600">0.137</td>
+              <td class="duration" data-value="137212600">0.137</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountSummaryStepDefs.account_summary_page_should_have_to_following_account_types(String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="107453300">0.107</td>
+              <td class="duration" data-value="107453300">0.107</td>
+              <td class="duration" data-value="107453300">0.107</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountSummaryStepDefs.credit_Accounts_table_must_have_columns(String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="78864800">0.078</td>
+              <td class="duration" data-value="78864800">0.078</td>
+              <td class="duration" data-value="78864800">0.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountSummaryStepDefs.page_should_have_the_title(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="10886375">0.010</td>
+              <td class="duration" data-value="10886375">0.015</td>
+              <td class="duration" data-value="43545500">0.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountSummaryStepDefs.the_user_clicks_on_link_on_the_page(String)</td>
+              <td>5</td>
+              <td class="duration" data-value="786448420">0.786</td>
+              <td class="duration" data-value="786448420">0.848</td>
+              <td class="duration" data-value="3932242100">3.932</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountSummaryStepDefs.the_user_navigates_to_module(String)</td>
+              <td>25</td>
+              <td class="duration" data-value="1063072848">1.063</td>
+              <td class="duration" data-value="1063072848">1.553</td>
+              <td class="duration" data-value="26576821200">26.576</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Hooks.setUp()</td>
+              <td>19</td>
+              <td class="duration" data-value="9688856905">9.688</td>
+              <td class="duration" data-value="9688856905">12.297</td>
+              <td class="duration" data-value="184088281200">3:4.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Hooks.tearDown(Scenario)</td>
+              <td>19</td>
+              <td class="duration" data-value="822521968">0.822</td>
+              <td class="duration" data-value="822521968">1.125</td>
+              <td class="duration" data-value="15627917400">15.627</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">LoginStepDefs.error_message_should_be_displayed(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="50932800">0.050</td>
+              <td class="duration" data-value="50932800">0.050</td>
+              <td class="duration" data-value="50932800">0.050</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">LoginStepDefs.page_should_be_displayed(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="18153683">0.018</td>
+              <td class="duration" data-value="18153683">0.023</td>
+              <td class="duration" data-value="108922100">0.108</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">LoginStepDefs.the_user_is_on_the_Login_page()</td>
+              <td>19</td>
+              <td class="duration" data-value="981936710">0.981</td>
+              <td class="duration" data-value="981936710">1.467</td>
+              <td class="duration" data-value="18656797500">18.656</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">LoginStepDefs.the_user_logs_in_with_valid_credentials_username_and_password(String,String)</td>
+              <td>18</td>
+              <td class="duration" data-value="1467342022">1.467</td>
+              <td class="duration" data-value="1467342022">1.656</td>
+              <td class="duration" data-value="26412156400">26.412</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">LoginStepDefs.the_user_tries_to_login_with_invalid_information(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="689051400">0.689</td>
+              <td class="duration" data-value="689051400">0.689</td>
+              <td class="duration" data-value="689051400">0.689</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PayBillsStepDefs.error_message_should_be_displayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="1006978100">1.006</td>
+              <td class="duration" data-value="1006978100">1.007</td>
+              <td class="duration" data-value="2013956200">2.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PayBillsStepDefs.following_currencies_should_be_available(String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="3432129100">3.432</td>
+              <td class="duration" data-value="3432129100">3.432</td>
+              <td class="duration" data-value="3432129100">3.432</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PayBillsStepDefs.theAlertMessageShouldBeDisplayed(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="34524000">0.034</td>
+              <td class="duration" data-value="34524000">0.034</td>
+              <td class="duration" data-value="34524000">0.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PayBillsStepDefs.the_message_should_be_displayed(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="41414650">0.041</td>
+              <td class="duration" data-value="41414650">0.041</td>
+              <td class="duration" data-value="82829300">0.082</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PayBillsStepDefs.the_user_completes_a_successful_Pay_operation_with_valid_credentials_amount_and_date(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="777554300">0.777</td>
+              <td class="duration" data-value="777554300">0.777</td>
+              <td class="duration" data-value="777554300">0.777</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PayBillsStepDefs.the_user_creates_new_payee_using_following_information(String,String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="1366440900">1.366</td>
+              <td class="duration" data-value="1366440900">1.366</td>
+              <td class="duration" data-value="1366440900">1.366</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PayBillsStepDefs.the_user_tries_to_calculate_cost_without_entering_a_value()</td>
+              <td>1</td>
+              <td class="duration" data-value="319386300">0.319</td>
+              <td class="duration" data-value="319386300">0.319</td>
+              <td class="duration" data-value="319386300">0.319</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PayBillsStepDefs.the_user_tries_to_calculate_cost_without_selecting_a_currency()</td>
+              <td>1</td>
+              <td class="duration" data-value="575620900">0.575</td>
+              <td class="duration" data-value="575620900">0.575</td>
+              <td class="duration" data-value="575620900">0.575</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PayBillsStepDefs.the_user_tries_to_make_a_payment_without_entering_the_amount_or_date(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="369131000">0.369</td>
+              <td class="duration" data-value="369131000">0.369</td>
+              <td class="duration" data-value="369131000">0.369</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>37</td>
+            <td>168</td>
+            <td class="duration">1.936</td>
+            <td class="duration">3:4.088</td>
+            <td class="duration">5:25.303</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
